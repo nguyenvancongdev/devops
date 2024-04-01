@@ -1,0 +1,2 @@
+- demo ứng dụng nginx
+- xử dụng thêm restart: "no" để xác định container sẽ không restart khi gặp lỗi

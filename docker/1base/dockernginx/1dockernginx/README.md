@@ -1,0 +1,2 @@
+- demo ứng dụng nginx
+- xử dụng những cái cơ bản nhất
