@@ -1,0 +1,12 @@
+version: '3'
+services:
+  apache:
+    image: httpd:latest
+    ports: 
+      - "90:80"
+    volumes:
+      # - ./html/index.html:/usr/local/apache2/htdocs/html/index.html
+      # - ./html:/usr/local/apache2/htdocs
+      - ./index.html:/usr/local/apache2/htdocs/html/index.html
+                      
+    restart: always
