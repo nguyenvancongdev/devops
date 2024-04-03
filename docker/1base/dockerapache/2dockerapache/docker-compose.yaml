@@ -3,10 +3,15 @@ services:
   apache:
     image: httpd:latest
     ports: 
-      - "90:80"
+      - "156:80"
     volumes:
-      # - ./html/index.html:/usr/local/apache2/htdocs/html/index.html
-      # - ./html:/usr/local/apache2/htdocs
-      - ./index.html:/usr/local/apache2/htdocs/html/index.html
+      # - ./html:/usr/local/apache2/htdocs (pass)
+      # - ./html/index.html:/usr/local/apache2/htdocs/index.html (pass)
+      - ./index.html:/usr/local/apache2/htdocs/index.html (pass)
+      # - ./html/index.html:/usr/local/apache2/htdocs/html/index.html (KHONG PASS)
+      # - ./html/index.html:/usr/local/apache2/htdocs/html (khong pass)
+      # - ./index.html:/usr/local/apache2/htdocs/html/index.html (khong pass)
+      # - ./html/index.html:/usr/local/apache2/htdocs (khong pass)
+
                       
     restart: always
