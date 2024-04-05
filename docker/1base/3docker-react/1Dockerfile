@@ -1,0 +1,15 @@
+# Stage 1: Build
+FROM node:18 AS builder
+WORKDIR /app
+COPY ./package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+
+# Stage 2: Production image
+FROM nginx:alpine AS production
+COPY --from=builder /app/build /usr/share/nginx/html
+# CMD ["nginx", "-g", "daemon off;"]
+# lệnh này nghĩa là gì
+# nginx: tên của lệnh chính ra đời
+# -g daemon off: -g là 1 cờ biến toàn cục, tắt chế độ daemon;

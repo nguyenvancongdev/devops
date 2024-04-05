@@ -6,3 +6,4 @@ docker ps
 docker stop $(docker ps -aq)
 - delete tất cả các container:
 docker rm $(docker ps -aq)
+- lệnh chạy docker: sudo docker-compose -f 1docker-compose.yaml up
