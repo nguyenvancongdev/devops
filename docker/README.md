@@ -1,5 +1,5 @@
 1 số lệnh hay dùng:
-- liệt kê các image đang có:
+- liệt kê các image đang có: sudo docker images
 - liệt kê các container đang có:
 docker ps
 - stop tất cả các container:
