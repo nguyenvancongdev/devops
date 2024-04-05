@@ -4,8 +4,9 @@ services:
     build:
       context: .
       dockerfile: 1Dockerfile
-    image: react_nginx  
     ports: 
       - "44:80"
     restart: always
+    volumes:
+      - .:/app
     
