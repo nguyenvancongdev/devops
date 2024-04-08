@@ -10,9 +10,13 @@ services:
     volumes:
       - .:/app  
     environment:
-      - CHOKIDAR_USEPOLLING=true # create-ui-app <= 5.x
+      - CHOKIDAR_USEPOLLING=true # create-ui-app <= 5.x 
       - WATCHPACK_POLLING=true # create-ui-app >= 5.x
       - FAST_REFRESH=false
       - WDS_SOCKET_PORT=550 # The mapped port on your host machine  
+# nghiên cứu về các lĩnh vực của ENV này nhé:
 
-
+# CHOKIDAR_USEPOLLING=true, cấu hình thư viện để theo dõi thay đổi
+# WATCHPACK_POLLING cấu hình webpack
+# FAST_REFRESH =false - yeu cau tai lai trang khi co thay doi
+#  WDS_SOCKET_PORT=550 mo 1 cong ket noi
