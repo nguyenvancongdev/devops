@@ -1,0 +1,14 @@
+version: '3'
+services:
+  nginxConect:
+    image: nginx:latest
+    ports: 
+      - "70:80"
+    restart: always
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html
+    environment:
+      - FAST_REFRESH=false
+      - WDS_SOCKET_PORT=70
+    # việc sử dụng env vẫn không thể nào reload được, tại vì nó là vậy
+    
