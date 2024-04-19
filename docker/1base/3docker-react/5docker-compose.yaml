@@ -1,0 +1,17 @@
+version: '3'
+services:
+  react:
+    build:
+      context: .
+      dockerfile: 2Dockerfile
+    restart: always
+    volumes:
+      - .:/app  
+  nginx:
+    image: nginx:latest
+    ports: 
+      - "80:80"
+    restart: always
+    volumes:
+      - ./build:/usr/share/nginx/html
+      
