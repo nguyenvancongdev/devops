@@ -12,6 +12,9 @@ services:
     ports: 
       - "80:80"
     restart: always
-    volumes:
+    # volumes:
       # - ./app/build:/usr/share/nginx/html
+
+
+// do là ánh xạ 2 chiều nên nếu ta run build ở bên trong thì cũng sẽ build ở bên ngoài, oki      
       
